@@ -1,0 +1,234 @@
+|designblock2
+SW[0] => second.DATAB
+SW[0] => y.DATAB
+SW[0] => y.DATAA
+SW[0] => Add2.IN8
+SW[1] => second.DATAB
+SW[1] => y.DATAB
+SW[1] => y.DATAA
+SW[1] => Add2.IN7
+SW[2] => second.DATAB
+SW[2] => y.DATAB
+SW[2] => y.DATAA
+SW[2] => Add2.IN6
+SW[3] => second.DATAB
+SW[3] => y.DATAB
+SW[3] => y.DATAA
+SW[3] => negative2[2].IN1
+SW[3] => Add2.IN5
+SW[4] => x[0].IN1
+SW[5] => x[1].IN1
+SW[6] => x[2].IN1
+SW[7] => x[3].IN1
+KEY[0] => y.OUTPUTSELECT
+KEY[0] => y.OUTPUTSELECT
+KEY[0] => y.OUTPUTSELECT
+KEY[0] => y.OUTPUTSELECT
+KEY[0] => _.IN1
+KEY[1] => ~NO_FANOUT~
+LEDR[0] << <GND>
+LEDR[1] << <GND>
+LEDR[2] << <GND>
+LEDR[3] << <GND>
+LEDR[4] << <GND>
+LEDR[5] << <GND>
+LEDR[6] << <GND>
+LEDR[7] << <GND>
+LEDR[8] << <GND>
+LEDR[9] << <GND>
+HEX0[0] << print7seg:U9.HEX
+HEX0[1] << print7seg:U9.HEX
+HEX0[2] << print7seg:U9.HEX
+HEX0[3] << print7seg:U9.HEX
+HEX0[4] << print7seg:U9.HEX
+HEX0[5] << print7seg:U9.HEX
+HEX0[6] << print7seg:U9.HEX
+HEX0[7] << print7seg:U9.HEX
+HEX1[0] << print7seg:U8.HEX
+HEX1[1] << print7seg:U8.HEX
+HEX1[2] << print7seg:U8.HEX
+HEX1[3] << print7seg:U8.HEX
+HEX1[4] << print7seg:U8.HEX
+HEX1[5] << print7seg:U8.HEX
+HEX1[6] << print7seg:U8.HEX
+HEX1[7] << print7seg:U8.HEX
+HEX2[0] << print7seg:U7.HEX
+HEX2[1] << print7seg:U7.HEX
+HEX2[2] << print7seg:U7.HEX
+HEX2[3] << print7seg:U7.HEX
+HEX2[4] << print7seg:U7.HEX
+HEX2[5] << print7seg:U7.HEX
+HEX2[6] << print7seg:U7.HEX
+HEX2[7] << print7seg:U7.HEX
+HEX3[0] << print7seg:U5.HEX
+HEX3[1] << print7seg:U5.HEX
+HEX3[2] << print7seg:U5.HEX
+HEX3[3] << print7seg:U5.HEX
+HEX3[4] << print7seg:U5.HEX
+HEX3[5] << print7seg:U5.HEX
+HEX3[6] << print7seg:U5.HEX
+HEX3[7] << print7seg:U5.HEX
+HEX4[0] << print7seg:U6.HEX
+HEX4[1] << print7seg:U6.HEX
+HEX4[2] << print7seg:U6.HEX
+HEX4[3] << print7seg:U6.HEX
+HEX4[4] << print7seg:U6.HEX
+HEX4[5] << print7seg:U6.HEX
+HEX4[6] << print7seg:U6.HEX
+HEX4[7] << print7seg:U6.HEX
+HEX5[0] << print7seg:U4.HEX
+HEX5[1] << print7seg:U4.HEX
+HEX5[2] << print7seg:U4.HEX
+HEX5[3] << print7seg:U4.HEX
+HEX5[4] << print7seg:U4.HEX
+HEX5[5] << print7seg:U4.HEX
+HEX5[6] << print7seg:U4.HEX
+HEX5[7] << print7seg:U4.HEX
+
+
+|designblock2|full_adder:U0
+Cin => sum.IN0
+Cin => Cout.IN0
+Cin => Cout.IN0
+a => sum.IN1
+a => Cout.IN0
+a => Cout.IN1
+b => sum.IN1
+b => Cout.IN1
+b => Cout.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|designblock2|full_adder:U1
+Cin => sum.IN0
+Cin => Cout.IN0
+Cin => Cout.IN0
+a => sum.IN1
+a => Cout.IN0
+a => Cout.IN1
+b => sum.IN1
+b => Cout.IN1
+b => Cout.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|designblock2|full_adder:U2
+Cin => sum.IN0
+Cin => Cout.IN0
+Cin => Cout.IN0
+a => sum.IN1
+a => Cout.IN0
+a => Cout.IN1
+b => sum.IN1
+b => Cout.IN1
+b => Cout.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|designblock2|full_adder:U3
+Cin => sum.IN0
+Cin => Cout.IN0
+Cin => Cout.IN0
+a => sum.IN1
+a => Cout.IN0
+a => Cout.IN1
+b => sum.IN1
+b => Cout.IN1
+b => Cout.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|designblock2|print7seg:U4
+num[0] => Decoder0.IN3
+num[1] => Decoder0.IN2
+num[2] => Decoder0.IN1
+num[3] => Decoder0.IN0
+HEX[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+HEX[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+HEX[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+HEX[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+HEX[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+HEX[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+HEX[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+HEX[7] <= <VCC>
+
+
+|designblock2|print7seg:U5
+num[0] => Decoder0.IN3
+num[1] => Decoder0.IN2
+num[2] => Decoder0.IN1
+num[3] => Decoder0.IN0
+HEX[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+HEX[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+HEX[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+HEX[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+HEX[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+HEX[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+HEX[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+HEX[7] <= <VCC>
+
+
+|designblock2|print7seg:U8
+num[0] => Decoder0.IN3
+num[1] => Decoder0.IN2
+num[2] => Decoder0.IN1
+num[3] => Decoder0.IN0
+HEX[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+HEX[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+HEX[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+HEX[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+HEX[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+HEX[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+HEX[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+HEX[7] <= <VCC>
+
+
+|designblock2|print7seg:U6
+num[0] => Decoder0.IN3
+num[1] => Decoder0.IN2
+num[2] => Decoder0.IN1
+num[3] => Decoder0.IN0
+HEX[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+HEX[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+HEX[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+HEX[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+HEX[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+HEX[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+HEX[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+HEX[7] <= <VCC>
+
+
+|designblock2|print7seg:U7
+num[0] => Decoder0.IN3
+num[1] => Decoder0.IN2
+num[2] => Decoder0.IN1
+num[3] => Decoder0.IN0
+HEX[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+HEX[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+HEX[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+HEX[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+HEX[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+HEX[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+HEX[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+HEX[7] <= <VCC>
+
+
+|designblock2|print7seg:U9
+num[0] => Decoder0.IN3
+num[1] => Decoder0.IN2
+num[2] => Decoder0.IN1
+num[3] => Decoder0.IN0
+HEX[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+HEX[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+HEX[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+HEX[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+HEX[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+HEX[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+HEX[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+HEX[7] <= <VCC>
+
+
